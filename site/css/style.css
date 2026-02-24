@@ -105,14 +105,6 @@ h1, h2, h3 {
     border: 0;
 }
 
-a:visited{
-    color: var(--visited-dark);
-    text-decoration-style: dotted;
-}
-button{
-    color: var(--text-light);
-}
-
 /* ====================================
    BREADCRUMB
    ==================================== */
@@ -222,6 +214,10 @@ nav#menu a, nav#menu li {
     font-weight: 500;
     position: relative;
     transition: color 0.3s ease;
+}
+
+nav#menu a:visited{
+    color: var(--visited-dark);
 }
 
 nav#menu a:hover, nav#menu span:hover{
@@ -1186,6 +1182,9 @@ a:visited{
     text-decoration: underline;
 }
 
+.register-link a:visited{
+    color: var(--visited-dark);
+}
 /* ====================================
    DETTAGLI PRODOTTO
    ==================================== */
