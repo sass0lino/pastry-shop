@@ -117,7 +117,8 @@ if (isset($_GET['id'])) {
     if(empty($torteOrdinate) && empty($pasticciniOrdinati)){
         $listaDolciOrdinati .= '<p>Ordine vuoto</p>';
     } else {
-        $listaDolciOrdinati .= '<table>
+        $listaDolciOrdinati .= '<p id=\"descr\" class=\"sr-only\">Tabella organizzata per colonne che mostra l''elenco dei prodotti dell''ordine. Ogni riga contine le informazione di un prodotto: nome, dettagli (targa e/o porzione della torta), quantità e prezzo.</p>
+                                <table aria-describedby=\"descr\">    
                                     <caption><h3>Elenco dei Prodotti</h3></caption>
                                     <thead>
                                         <tr>
