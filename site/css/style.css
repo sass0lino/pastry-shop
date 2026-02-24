@@ -556,6 +556,7 @@ main {
 /* stato visited */
 .sweet-card:visited dt{
     border-color: var(--primary);
+    color: var(--visited-dark);
 }
 
 .sweet-card dt {
@@ -1022,21 +1023,21 @@ aside a:hover::after {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem 3rem;
+    grid-auto-flow: dense;
 }
 
 /* COLONNA SINISTRA */
 #formAggiungiProdotto .campoDati:nth-of-type(1), /* Tipo */
-#formAggiungiProdotto .campoDati:nth-of-type(2), /* Nome */
-#formAggiungiProdotto .campoDati:nth-of-type(4), /* Prezzo */
-#formAggiungiProdotto .campoDati:nth-of-type(5)  /* Immagine */
+#formAggiungiProdotto .campoDati:nth-of-type(3), /* Descrizione */
+#formAggiungiProdotto .campoDati:nth-of-type(6) /* Allergeni */
 {
     grid-column: 1;
 }
 
 /* COLONNA DESTRA */
-#formAggiungiProdotto .campoDati:nth-of-type(3), /* Descrizione */
-#formAggiungiProdotto .campoDati:nth-of-type(6), /* Testo ALT */
-#formAggiungiProdotto .campoDati:nth-of-type(7)  /* Allergeni */
+#formAggiungiProdotto .campoDati:nth-of-type(2), /* Nome */
+#formAggiungiProdotto .campoDati:nth-of-type(5), /* Immagine */
+#formAggiungiProdotto .campoDati:nth-of-type(4) /* Prezzo */
 {
     grid-column: 2;
 }
@@ -1084,7 +1085,13 @@ aside a:hover::after {
 /* TABELLA PRODOTTI */
 /* ---------------------------------------------- */
 .products-list-section{
-    margin: 0 auto;      
+    background-color: var(--box-bg);
+    padding: 2rem;
+    border: 1px solid var(--primary);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    margin: 0 auto;   
+    margin-top: 1.5em;   
     max-width: 1400px;
 }
 
@@ -1194,22 +1201,12 @@ button[type="submit"]:active {
     border-top: 1px solid #E5E5E5;
     color: var(--text-dark);
 }
-/*
-a{
-    border: 1px dotted var(--box-bg);
-}
-
-a:visited{
-    color: red;
-    border-color: var(--primary);
-}*/
 
 .register-link a, .login-link a {
     color: var(--primary);
     font-weight: 600;
     transition: color 0.3s ease;
 }
-
 
 .register-link a:hover, .login-link a:hover {
     color: var(--primary-light);
@@ -1736,23 +1733,6 @@ tbody td a:hover {
     text-decoration: underline;
 }
 
-.table-scroll {
-    max-height: 100vh;     
-    overflow-y: auto;
-    overflow-x: hidden;
-    border-radius: 12px;
-    scroll-behavior: smooth;
-}
-
-/* Per far rimanere visibile l'intestazione */
-.table-scroll thead th {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
-
-
-
 .stato-ordine {
     display: flex;
     align-items: center;
@@ -1901,9 +1881,6 @@ tbody td a:hover {
     outline-offset: 4px;
 }
 
-
-
-
 .cardTorta img {
     width: 100%;
     height: 280px;
@@ -1937,7 +1914,7 @@ tbody td a:hover {
 
 /* stato visited */
 .cardTorta > a:visited h3 {
-    border-color: black;
+    border-color: var(--primary);
     color: var(--visited-dark);
 }
 
@@ -2220,6 +2197,7 @@ footer address {
     flex-wrap: wrap;
     gap: 1em;
 }
+
 /*
 .admin-header h3 { margin: 0; color: var(--primary); text-transform: uppercase; }*/
 
@@ -2368,6 +2346,7 @@ footer address {
     border: 1px solid var(--text-dark);
 }
 
+.pannello-admin:hover,
 .profile-card:hover,
 .orders-card:hover {
     transform: translateY(-5px);

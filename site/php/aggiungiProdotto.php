@@ -92,6 +92,8 @@ if(isset($_POST['submit'])){
             $erroreNome = '<p class="errore" role="alert">Inserire il nome</p>';
         } else if (strlen($nome) > 30){
             $erroreNome = '<p class="errore" role="alert">Il nome non può superare 30 caratteri</p>';
+        } else if (!preg_match('/^[a-zA-Z0-9àèéìòùÀÈÉÌÒÙ\s\'-]+$/u', $nome)) {
+            $erroreNome = '<p class="errore" role="alert">Il nome può contenere solo lettere, numeri, spazi, apostrofi e trattini.</p>';
         }
 
         // Descrizione
@@ -147,7 +149,7 @@ if(isset($_POST['submit'])){
         } else {
             $erroreImmagine = '<p class="errore" role="alert">Inserire l\'immagine</p>';
         }
-   
+        /*
         //testo alternativo
         $testoAlternativo = pulisciInput($_POST['testoAlternativo']);
         if(strlen($testoAlternativo) === 0){
@@ -155,7 +157,7 @@ if(isset($_POST['submit'])){
         } else if (strlen($testoAlternativo) > 255){
             $erroreTestoAlternativo = '<p class="errore" role="alert">Il testo alternativo non può superare 255 caratteri</p>';
         }
-
+        */
         //allergeni
         $allergeni = isset($_POST['allergeni']) && is_array($_POST['allergeni']) ? $_POST['allergeni'] : [];
         $allergeni = array_map('htmlspecialchars', $allergeni);

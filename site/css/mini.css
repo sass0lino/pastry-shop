@@ -6,22 +6,6 @@
    TABLET - max-width: 968px
    ==================================== */
 @media (max-width: 968px) {
-      #formAggiungiProdotto fieldset {
-        grid-template-columns: 1fr;
-    }
-
-    #formAggiungiProdotto .campoDati {
-        grid-column: 1;
-    }
-
-    #formAggiungiProdotto button {
-        grid-column: 1;
-    }
-
-    .admin-content-grid {
-        grid-template-columns: 1fr;
-    }
-
     .ordine-extra {
         display: none;
     }
@@ -270,7 +254,31 @@
         padding: 0 1rem;
     }
 
-    /*Aggiungi Prodotto*/
+    /*-----------------------------------------------------------------*/
+    /* AGGIUNGI PRODOTTO*/
+    #formAggiungiProdotto fieldset {
+        grid-template-columns: 1fr;
+    }
+
+    #formAggiungiProdotto button {
+        grid-column: 1;
+    }
+
+    .admin-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #formAggiungiProdotto .campoDati:nth-of-type(1), /* Tipo */
+    #formAggiungiProdotto .campoDati:nth-of-type(2), /* Nome */
+    #formAggiungiProdotto .campoDati:nth-of-type(3), /* Descrizione */
+    #formAggiungiProdotto .campoDati:nth-of-type(4), /* Prezzo */
+    #formAggiungiProdotto .campoDati:nth-of-type(5), /* Immagine */
+    #formAggiungiProdotto .campoDati:nth-of-type(6)  /* Allergeni */
+    {
+        grid-column: 1;
+    }
+    /*-----------------------------------------------------------------*/
+    /*Area personale amministratore*/
     .admin-content-grid {
         display: block; /* colonna unica */
         padding: 1rem;
@@ -286,6 +294,7 @@
     .admin-content-grid {
         grid-template-columns: 1fr !important; /* tutto in colonna */
     }
+    /*-----------------------------------------------------------------*/
     /* Ordini Admin */
     main {
         padding: 2rem 1rem;
@@ -475,6 +484,7 @@
    MOBILE - max-width: 480px
    ==================================== */
 @media (max-width: 480px) {
+
     .product-detail-container {
         padding: 1rem;
     }
