@@ -49,7 +49,8 @@ if($connessione && empty($listaItem)){
         foreach($Items as $Item){
             // Immagini e Alt Text (con fallback)
             $imgSrc = !empty($Item['immagine']) ? "site/img/" . $Item['immagine'] : "site/img/placeholder.jpeg";
-            $altText = !empty($Item['testo_alternativo']) ? $Item['testo_alternativo'] : "Foto del dolce " . $Item['nome'];
+            //$altText = !empty($Item['testo_alternativo']) ? $Item['testo_alternativo'] : "Foto del dolce " . $Item['nome'];
+            $altText = '';
             
             // Creazione Card con Escape Output Sicuro
             $listaItem .="<li> <article class=\"cardTorta\">     

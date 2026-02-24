@@ -66,7 +66,8 @@ if($connessione){
         // IMMAGINE E ALT TEXT
         $imgSrc = !empty($Item['immagine']) ? "site/img/" . $Item['immagine'] : "site/img/placeholder.jpeg";
         // Usa testo alternativo DB se c'è, altrimenti fallback
-        $altText = !empty($Item['testo_alternativo']) ? $Item['testo_alternativo'] : "Foto del dolce " . $Item['nome'];
+        //$altText = !empty($Item['testo_alternativo']) ? $Item['testo_alternativo'] : "Foto del dolce " . $Item['nome'];
+        $altText = '';
 
         // SEZIONE DETTAGLI VISIVI
         $Itemdetails .= "<div class=\"product-info-section\">
