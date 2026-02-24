@@ -24,6 +24,7 @@ $db = new DBAccess();
 $connessione = $db->openDBConnection();
 $messaggioSistema = "";
 
+
 if (isset($_SESSION['msg_flash'])) {
     $messaggioSistema = $_SESSION['msg_flash'];
     unset($_SESSION['msg_flash']);
@@ -148,7 +149,7 @@ $tabellaOrdiniHTML = "<p>Nessun ordine effettuato.</p>";
 
 if($connessione){
     $ordini = $db->getOrdiniUtente($_SESSION['email']);
-    
+    $index = 0;
     if(!empty($ordini)){
         $tabellaOrdiniHTML = "
         <div class='table-scroll'>
@@ -177,9 +178,11 @@ if($connessione){
             $dataIta = date("d/m/Y", strtotime($o['ordinazione']));
             $statoTesto = isset($StatiOrdine[$statoKey]) ? $StatiOrdine[$statoKey] : 'Sconosciuto';
             $totaleFmt = number_format($o['totale'], 2, ',', '.');
-            
+
+            $classeExtra = ($index >= 5) ? " class='ordine-extra'" : "";
+
             $tabellaOrdiniHTML .= "
-            <tr>
+            <tr  $classeExtra>
                 <th scope='row' data-label='Numero'>$idSicuro</th> 
                 <td data-label='Data'>$dataIta</td>
                 <td data-label='Stato'><span class='stato-tag s-$statoKey'>$statoTesto</span></td>
@@ -188,8 +191,17 @@ if($connessione){
                      <a href=\"dettaglio-ordine?id=$idSicuro\" class='generic-button' aria-label='Vedi dettagli ordine numero $idSicuro'>Dettagli</a>
                 </td> 
             </tr>";
+            $index++;
         }
         $tabellaOrdiniHTML .= "</tbody></table></div>";
+        if(count($ordini) > 5){
+            $tabellaOrdiniHTML .= "
+            <button class='generic-button' 
+                    onclick='espandiOrdini(this)'
+                    aria-expanded='false'>
+                Mostra tutti gli ordini
+            </button>";
+        }
     }
 }
 

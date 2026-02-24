@@ -480,3 +480,19 @@ document.addEventListener('DOMContentLoaded', () => {
     setupFormValidation('formContattaci'); 
 
 });
+
+function espandiOrdini(button) {
+    const container = button.closest('.orders-content');
+
+    const expanded = button.getAttribute('aria-expanded') === 'true';
+
+    if (!expanded) {
+        container.classList.add('espanso');
+        button.textContent = "Mostra meno";
+        button.setAttribute('aria-expanded', 'true');
+    } else {
+        container.classList.remove('espanso');
+        button.textContent = "Mostra tutti gli ordini";
+        button.setAttribute('aria-expanded', 'false');
+    }
+}

@@ -7,6 +7,20 @@
    ==================================== */
 @media (max-width: 968px) {
 
+
+    .ordine-extra {
+        display: none;
+    }
+
+    .orders-content.espanso .ordine-extra {
+        display: table-row;
+    }
+
+    .btn-espandi {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
     .header-fixed-wrapper header {
         position: relative;
         z-index: 5000; 
