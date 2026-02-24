@@ -5,6 +5,7 @@ ATTENZIONE: sostituite nome_utente con il vostro nome utente del laboratorio di 
 Viene suggerito Putty come client ssh ma le istruzioni si riferiscono ad una versione vecchia, secondo me è più facile connettersi da terminale.
 aprire la connessione ssh da terminale con:
 ssh  -L8080:caa.studenti.math.unipd.it:80 -L8443:caa.studenti.math.unipd.it:443 -L8022:caa.studenti.math.unipd.it:22 nome_utente@paolotti.studenti.math.unipd.it
+sostituire a "nome_utente" il proprio nome utente di laboratorio
 NB: funziona a patto che le porte 8080 8443 8022 siano libere sul nostro pc. Nel caso bisogna usarne di altre libere.
 NON chiudere il terminale, per i passi seguenti serve la connessione al server.
 
@@ -17,9 +18,9 @@ i file del sito vanno copiati nella cartella public_html
 
 (3) CARICARE IL DATABASE SU  DI PHPMYADMIN
 una volta connessi con putty o ssh, digitare da browser:
-pheexei3AiVu4toh
-La password è da recuperare e si trova nel file presente nella vostra home sul server.
-nel mio caso: pheexei3AiVu4toh
+http://localhost:8080/phpmyadmin
+La password è da recuperare e si trova nel file presente nella vostra home sul server, 
+il nome del file è "pwd_db_caa.txt"
 NB: Il database ha di default il nostro nome utente, da specificare con la direttiva USE nome_utente; ad inizio del file sql.
 nel mio caso: USE gdelucch;
 
