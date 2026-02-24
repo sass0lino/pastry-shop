@@ -34,9 +34,9 @@ $menu = [
 $menuPrincipale = '';
 foreach ($menu as $m) {
     $isActive = ($currentPage === $m['href']);
-    $menuPrincipale .= '<li '.($isActive ? 'id="currentlink" aria-current="page"' : '').'>';
+    $menuPrincipale .= '<li>';
     if ($isActive) {
-        $menuPrincipale .= $m['label'];
+        $menuPrincipale .= '<span class="currentlink" aria-current="page">' . $m['label']. '</span>';
     } else {
         $menuPrincipale .= '<a href="'.htmlspecialchars($m['href']).'">'.$m['label'].'</a>';
     }
