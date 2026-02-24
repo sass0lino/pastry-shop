@@ -6,7 +6,21 @@
    TABLET - max-width: 968px
    ==================================== */
 @media (max-width: 968px) {
+      #formAggiungiProdotto fieldset {
+        grid-template-columns: 1fr;
+    }
 
+    #formAggiungiProdotto .campoDati {
+        grid-column: 1;
+    }
+
+    #formAggiungiProdotto button {
+        grid-column: 1;
+    }
+
+    .admin-content-grid {
+        grid-template-columns: 1fr;
+    }
 
     .ordine-extra {
         display: none;

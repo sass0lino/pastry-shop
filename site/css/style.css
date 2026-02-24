@@ -956,7 +956,8 @@ aside a:hover::after {
 
 /* CAMPI DATI FORM */
 .campoDati {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 1.5rem;
 }
 
@@ -1017,19 +1018,52 @@ aside a:hover::after {
 #formAggiungiProdotto {   
     margin: 0 auto;        /* centra la form */
 }
+#formAggiungiProdotto fieldset{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 3rem;
+}
 
+/* COLONNA SINISTRA */
+#formAggiungiProdotto .campoDati:nth-of-type(1), /* Tipo */
+#formAggiungiProdotto .campoDati:nth-of-type(2), /* Nome */
+#formAggiungiProdotto .campoDati:nth-of-type(4), /* Prezzo */
+#formAggiungiProdotto .campoDati:nth-of-type(5)  /* Immagine */
+{
+    grid-column: 1;
+}
+
+/* COLONNA DESTRA */
+#formAggiungiProdotto .campoDati:nth-of-type(3), /* Descrizione */
+#formAggiungiProdotto .campoDati:nth-of-type(6), /* Testo ALT */
+#formAggiungiProdotto .campoDati:nth-of-type(7)  /* Allergeni */
+{
+    grid-column: 2;
+}
+
+#formAggiungiProdotto button {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+}
+/*
 .admin-content-grid {
     display: grid;
-    grid-template-columns: 2fr 3fr; /* form più piccolo della tabella */
+    grid-template-columns: 2fr 3fr;  form più piccolo della tabella 
     gap: 2rem;
     padding: 2rem;
-}
+}*/
+
 /* ---------------------------------------------- */
 /* CHECKBOX SCELTA ALLERGENI aggiungiProdotto.html*/
-.allergeni-grid {
+/*.allergeni-grid {
     display: flex;
     flex-direction: column; 
     gap: 0.8rem; 
+}*/
+.allergeni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.8rem 1rem;
 }
 
 .allergeni-grid label {
