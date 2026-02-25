@@ -195,7 +195,7 @@ if($connessione){
         $tabellaOrdiniHTML .= "</tbody></table>";
         if(count($ordini) > 5){
             $tabellaOrdiniHTML .= "
-            <button class='generic-button' 
+            <button class='generic-button btn-espandi' 
                     onclick='espandiOrdini(this)'
                     aria-expanded='false'>
                 Mostra tutti gli ordini
