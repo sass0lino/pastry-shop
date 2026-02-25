@@ -25,6 +25,7 @@ $ID="";
 $listaAllergeni= "";
 $Itemdetails= "";
 $formAcquisto="";   
+$Categoria="";
 
 if(isset($_GET['ID']) && is_numeric($_GET['ID'])){
     $ID = $_GET['ID'];
@@ -93,6 +94,7 @@ if($connessione){
         // --- LOGICA TORTE ---
         if($tipoItem === 'torta'){
             $tipoBreadcrumb = "<a href=\"torte\">Torte</a>";
+            $Categoria="Torte"
             
             // Box 1: Dimensione
             $formAcquisto .= "<fieldset class=\"opzioniTorta\">
@@ -124,6 +126,7 @@ if($connessione){
             
         } else if($tipoItem === 'pasticcino'){
             $tipoBreadcrumb = "<a href=\"pasticcini\">Pasticcini</a>";
+            $Categoria="Pasticcini";
         }
 
         // --- BOX QUANTITÀ
