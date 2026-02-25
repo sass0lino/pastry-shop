@@ -76,7 +76,7 @@ h1, h2, h3 {
   padding: 8px;
   z-index: 100;
   transition: top 0.3s;
-  font-size: 14px;
+  font-size: 1.5rem;
 }
 
 .skip-link:focus {
@@ -1972,23 +1972,6 @@ tbody td a:hover {
     max-width: 1400px;
     margin: 1.5rem auto;
 }
-/*
-.cart-container .page-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.cart-container .page-header h2 {
-    font-size: 3rem;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
-
-.cart-container .page-header p {
-    color: var(--text-dark);
-    opacity: 0.8;
-    font-size: 1.1rem;
-}*/
 
 .carrello-vuoto {
     width: 100%;

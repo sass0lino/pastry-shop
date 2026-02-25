@@ -84,7 +84,7 @@ $icone = '';
 $iconaCarrelloSVG = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></svg>';
 
 if ($currentPage === 'carrello') {
-    $icone .= '<div class="icon-btn" aria-label="Carrello">'.$iconaCarrelloSVG.$badgeCarrello.'<span class="sr-only">Carrello</span></div>';
+    $icone .= '<div class="icon-btn">'.$iconaCarrelloSVG.$badgeCarrello.'<span class="sr-only">Carrello</span></div>';
 } else {
     $icone .= '<a href="carrello" class="icon-btn" aria-label="Carrello">'.$iconaCarrelloSVG.$badgeCarrello.'<span class="sr-only">Carrello</span></a>';
 }
@@ -101,7 +101,7 @@ if (isset($_SESSION['ruolo']) && in_array($_SESSION['ruolo'], ['user','admin']))
 }
 
 if ($currentPage === $hrefUtente) {
-    $icone .= '<div class="icon-btn" aria-label="'.$labelUtente.'">'.$iconaUtenteSVG.'<span class="sr-only">'.$labelUtente.'</span></div>';
+    $icone .= '<div class="icon-btn">'.$iconaUtenteSVG.'<span class="sr-only">'.$labelUtente.'</span></div>';
 } else {
     $icone .= '<a href="'.$hrefUtente.'" class="icon-btn" aria-label="'.$labelUtente.'">'.$iconaUtenteSVG.'<span class="sr-only">'.$labelUtente.'</span></a>';
 }
