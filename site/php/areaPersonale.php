@@ -152,7 +152,6 @@ if($connessione){
     $index = 0;
     if(!empty($ordini)){
         $tabellaOrdiniHTML = "
-        <div class='table-scroll'>
         <p id=\"descr\" class=\"sr-only\">Tabella organizzata per colonne che mostra lo storico degli ordini effettuati dall'utente.
         Ogni riga descrive un'ordine con numero identificativo, data di ritiro, stato, prezzo totale, azioni.</p>
         <table aria-describedby='descr'>
@@ -193,7 +192,7 @@ if($connessione){
             </tr>";
             $index++;
         }
-        $tabellaOrdiniHTML .= "</tbody></table></div>";
+        $tabellaOrdiniHTML .= "</tbody></table>";
         if(count($ordini) > 5){
             $tabellaOrdiniHTML .= "
             <button class='generic-button' 

@@ -6,13 +6,6 @@
    TABLET - max-width: 968px
    ==================================== */
 @media (max-width: 968px) {
-    .ordine-extra {
-        display: none;
-    }
-
-    .orders-content.espanso .ordine-extra {
-        display: table-row;
-    }
 
     .btn-espandi {
         margin-top: 1rem;

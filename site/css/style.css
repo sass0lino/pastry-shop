@@ -942,6 +942,10 @@ aside a:hover::after {
   gap: 1rem;                     /* piccolo spazio tra pulsanti se vanno a capo */
   margin-top: 1.5rem;            /* distanza dal riepilogo */
 }
+
+#contenitoreTabella{
+    max-width: 1400px;
+}
 .welcome-text {
     color: var(--text-dark);
     opacity: 0.8;
@@ -1025,21 +1029,26 @@ aside a:hover::after {
     gap: 2rem 3rem;
     grid-auto-flow: dense;
 }
+#formAggiungiProdotto .form-container{
+    max-width: 1400px;
+}
 
 /* COLONNA SINISTRA */
-#formAggiungiProdotto .campoDati:nth-of-type(1), /* Tipo */
+
 #formAggiungiProdotto .campoDati:nth-of-type(3), /* Descrizione */
 #formAggiungiProdotto .campoDati:nth-of-type(6) /* Allergeni */
 {
-    grid-column: 1;
+    grid-column: 2;
 }
 
 /* COLONNA DESTRA */
+#formAggiungiProdotto .campoDati:nth-of-type(1), /* Tipo */
 #formAggiungiProdotto .campoDati:nth-of-type(2), /* Nome */
-#formAggiungiProdotto .campoDati:nth-of-type(5), /* Immagine */
-#formAggiungiProdotto .campoDati:nth-of-type(4) /* Prezzo */
+#formAggiungiProdotto .campoDati:nth-of-type(4), /* Prezzo */
+#formAggiungiProdotto .campoDati:nth-of-type(5) /* Immagine */
+
 {
-    grid-column: 2;
+    grid-column: 1;
 }
 
 #formAggiungiProdotto button {
@@ -2487,7 +2496,7 @@ footer address {
 }
 
 .orders-content table {
-    max-width: 100%;
+    width: 100%;
     border-collapse: collapse;
 }
 
@@ -2538,6 +2547,13 @@ footer address {
     opacity: 0.3;
     margin-bottom: 1rem;
 }
+    .ordine-extra {
+        display: none;
+    }
+
+    .orders-content.espanso .ordine-extra {
+        display: table-row;
+    }
 
 /* Zona Pericolo */
 .danger-zone {
