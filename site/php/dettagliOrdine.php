@@ -125,7 +125,7 @@ if (isset($_GET['id'])) {
                                             <th scope=\"col\">Nome</th>
                                             <th scope=\"col\">Dettagli</th>
                                             <th scope=\"col\">Quantità</th>
-                                            <th scope=\"col\">Prezzo <abbr title="Euro">(€)</abbr></th>
+                                            <th scope=\"col\">Prezzo <abbr title=\"Euro\">(€)</abbr></th>
                                         </tr>
                                     </thead>
                                 <tbody>";
