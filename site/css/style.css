@@ -3163,3 +3163,17 @@ textarea[aria-invalid="true"] {
     border-color: #d32f2f;
     background-color: #fff8f8;
 }
+
+/*-----------------------------------------------------*/
+/*CSS LEGATO ALLO SCRIPT JAVASCRIPT*/
+/*-----------------------------------------------------*/
+#box-autocompilazione {
+  display: none;
+}
+#box-autocompilazione.visibile {
+  display: flex;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}

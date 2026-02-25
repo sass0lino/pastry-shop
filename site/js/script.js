@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
             };
 
             // 2. Mostro il box dell'autocompilazione
-            box.style.display = 'flex';
+            //box.style.display = 'flex';
+            box.classList.add('visibile');
 
             function applicaDati() {
                 if (checkbox.checked) {
@@ -76,18 +77,15 @@ function toggleMenu() {
         btn.setAttribute('aria-expanded', isNowActive);
         btn.setAttribute('aria-label', isNowActive ? 'Chiudi menu' : 'Apri menu');
 
+        document.body.classList.toggle('no-scroll', isNowActive);
+
         if (isNowActive) {
             setTimeout(() => {
                 const firstLink = menu.querySelector('a');
-                if (firstLink) {
-                    firstLink.focus();
-                }
+                if (firstLink) firstLink.focus();
             }, 50);
-            document.body.style.overflow = 'hidden';
-
         } else {
             btn.focus();
-            document.body.style.overflow = '';
         }
     }
 }
@@ -204,11 +202,7 @@ const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
         if (mutation.attributeName === 'class') {
             const menu = document.getElementById('menu');
-            if (menu && menu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
+            document.body.classList.toggle('no-scroll', menu && menu.classList.contains('active'));
         }
     });
 });

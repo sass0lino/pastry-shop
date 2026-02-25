@@ -191,6 +191,7 @@
     .contact-info,
     .form-container {
         padding: 2rem;
+        margin-top: 1.5rem;
     }
 
     .contact-info h2,
