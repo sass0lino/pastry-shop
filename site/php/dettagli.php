@@ -94,7 +94,7 @@ if($connessione){
         // --- LOGICA TORTE ---
         if($tipoItem === 'torta'){
             $tipoBreadcrumb = "<a href=\"torte\">Torte</a>";
-            $Categoria="Torte"
+            $Categoria="Torte";
             
             // Box 1: Dimensione
             $formAcquisto .= "<fieldset class=\"opzioniTorta\">
