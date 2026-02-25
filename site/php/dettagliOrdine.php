@@ -117,18 +117,18 @@ if (isset($_GET['id'])) {
     if(empty($torteOrdinate) && empty($pasticciniOrdinati)){
         $listaDolciOrdinati .= '<p>Ordine vuoto</p>';
     } else {
-        $listaDolciOrdinati .= '<p id=\"descr\" class=\"sr-only\">Tabella organizzata per colonne che mostra l''elenco dei prodotti dell''ordine. Ogni riga contine le informazione di un prodotto: nome, dettagli (targa e/o porzione della torta), quantità e prezzo.</p>
+        $listaDolciOrdinati .= "<p id=\"descr\" class=\"sr-only\">Tabella organizzata per colonne che mostra l'elenco dei prodotti dell'ordine. Ogni riga contiene le informazioni di un prodotto: nome, dettagli (targa e/o porzione della torta), quantità e prezzo.</p>
                                 <table aria-describedby=\"descr\">    
                                     <caption><h3>Elenco dei Prodotti</h3></caption>
                                     <thead>
                                         <tr>
-                                            <th scope="col">Nome</th>
-                                            <th scope="col">Dettagli</th>
-                                            <th scope="col">Quantità</th>
-                                            <th scope="col">Prezzo <abbr title="Euro">(€)</abbr></th>
+                                            <th scope=\"col\">Nome</th>
+                                            <th scope=\"col\">Dettagli</th>
+                                            <th scope=\"col\">Quantità</th>
+                                            <th scope=\"col\">Prezzo <abbr title="Euro">(€)</abbr></th>
                                         </tr>
                                     </thead>
-                                <tbody>';
+                                <tbody>";
         if(!empty($torteOrdinate)){     //se è stata ordinata almeno una torta
             foreach ($torteOrdinate as $torta){
     
